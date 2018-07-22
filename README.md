@@ -25,15 +25,16 @@ Things you may want to cover:
 =============================
 * TODO Chapter 7 Playtime
 
-• The :length validation option checks the length of a model attribute. Add validation to the Product model to check that the title is at least ten characters.
+• [DONE] The :length validation option checks the length of a model attribute. Add validation to the Product model to check that the title is at least ten characters.
 
-• Change the error message associated with one of your validations.
+• [DONE] Change the error message associated with one of your validations.
 
 * TODO Chapter 8 Playtime
 
-•Add a date and time to the sidebar. It doesn’t have to update; just show the value at the time the page was displayed.
+•[DONE] Add a date and time to the sidebar. It doesn’t have to update; just show the value at the time the page was displayed.
 
-•Write some functional tests for the product management application using assert_select. The tests will need to be placed into the test/controllers/products_con- troller_test.rb file.
+•[DONE]Write some functional tests for the product management application using assert_select. The tests will need to be placed into the test/controllers/products_con- troller_test.rb file.
+https://www.rubydoc.info/github/rails/rails-dom-testing/Rails/Dom/Testing/Assertions/SelectorAssertions
 
 * TODO Chapter 9 Playtime
 
