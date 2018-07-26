@@ -33,3 +33,10 @@ page. Hint: the pluralize helper (definition on page 398) might be useful for fo
 * Check products and line items for other places where a user-friendly error message would be in order.
 * Add the ability to delete individual line items from the cart. This will require buttons on each line, and such buttons will need to be linked to the destroy() action in the LineItemsController.
 * We prevented accessing other user’s carts in the LineItemsController, but you can still see other carts by navigating directly to a URL like http://local- host/carts/3. See if you can prevent accessing any cart other than than one currently stored in the session.
+
+
+* TODO Chapter 11 Playtime
+* The cart is currently hidden when the user empties it by redrawing the entire catalog. Can you change the application to remove it using an Ajax request, so the page doesn’t reload?
+* Add a button next to each item in the cart. When clicked, it should invoke an action to decrement the quantity of the item, deleting it from the cart when the quantity reaches zero. Get it working without using Ajax first and then add the Ajax goodness.
+* Make images clickable. In response to a click, add the associated product to the cart.
+* When a product changes, highlight the product that changed in response to receiving a broadcast message.
