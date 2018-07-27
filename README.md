@@ -40,3 +40,13 @@ page. Hint: the pluralize helper (definition on page 398) might be useful for fo
 * Add a button next to each item in the cart. When clicked, it should invoke an action to decrement the quantity of the item, deleting it from the cart when the quantity reaches zero. Get it working without using Ajax first and then add the Ajax goodness.
 * Make images clickable. In response to a click, add the associated product to the cart.
 * When a product changes, highlight the product that changed in response to receiving a broadcast message.
+
+
+* TODO Chapter 12 Playtime
+Here’s some stuff to try on your own:
+1.
+https://github.com/rails/activemodel-serializers-xml#readme
+
+* Get HTML- and JSON-formatted views working for who_bought requests. Experiment with including the order information in the JSON view by rendering @product.to_json(include: :orders). Do the same thing for XML using ActiveModel::Serializers::Xml.1
+* What happens if you click the Checkout button in the sidebar while the checkout screen is already displayed? Can you find a way to disable the button in this circumstance?
+* The list of possible payment types is currently stored as a constant in the Order class. Can you move this list into a database table? Can you still make validation work for the field?
