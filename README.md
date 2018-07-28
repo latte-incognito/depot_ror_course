@@ -50,3 +50,8 @@ https://github.com/rails/activemodel-serializers-xml#readme
 * Get HTML- and JSON-formatted views working for who_bought requests. Experiment with including the order information in the JSON view by rendering @product.to_json(include: :orders). Do the same thing for XML using ActiveModel::Serializers::Xml.1
 * What happens if you click the Checkout button in the sidebar while the checkout screen is already displayed? Can you find a way to disable the button in this circumstance?
 * The list of possible payment types is currently stored as a constant in the Order class. Can you move this list into a database table? Can you still make validation work for the field?
+
+* TODO Chapter 13 Playtime
+* Check is not the only payment type, and routing number is not the only field that is dynamically inserted or deleted based on the payment type. Extend the system test to include other choices and other fields.
+* Add a test to verify that the Add to Cart and Empty Cart buttons reveal and hide the cart, respectively.
+* Add a test of the highlight feature you added in Iteration F3: Highlighting Changes, on page 164.
