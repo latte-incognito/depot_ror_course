@@ -55,3 +55,12 @@ https://github.com/rails/activemodel-serializers-xml#readme
 * Check is not the only payment type, and routing number is not the only field that is dynamically inserted or deleted based on the payment type. Extend the system test to include other choices and other fields.
 * Add a test to verify that the Add to Cart and Empty Cart buttons reveal and hide the cart, respectively.
 * Add a test of the highlight feature you added in Iteration F3: Highlighting Changes, on page 164.
+
+* TODO lol mb attach stripe or braintree
+
+* TODO Chapter 14 Playtime
+
+* Add a ship_date column to the orders table, and send a notification when this value is updated by the OrdersController.
+* Update the application to send an email to the system administrator— namely, yourself—when an application failure occurs, such as the one we handled in Iteration E2: Handling Errors, on page 138.
+* Modify Pago to sometimes return a failure (OpenStruct.new(succeeded?: false)), and handle that by sending a different email with the details of the failure.
+* Add system tests for all of the above.
