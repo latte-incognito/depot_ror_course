@@ -64,3 +64,21 @@ https://github.com/rails/activemodel-serializers-xml#readme
 * Update the application to send an email to the system administrator— namely, yourself—when an application failure occurs, such as the one we handled in Iteration E2: Handling Errors, on page 138.
 * Modify Pago to sometimes return a failure (OpenStruct.new(succeeded?: false)), and handle that by sending a different email with the details of the failure.
 * Add system tests for all of the above.
+
+* TODO Chapter 15 Playtime
+* Modify the user update function to require and validate the current password before allowing a user’s password to be changed.
+* When the system is freshly installed on a new machine, no administrators are defined in the database, and hence no administrator can log on. But, if no administrator can log on, then no one can create an administrative user.
+* Change the code so that if no administrator is defined in the database, any username works to log on (allowing you to quickly create a real administrator).
+* Experiment with rails console. Try creating products, orders, and line items. Watch for the return value when you save a model object—when validation fails, you’ll see false returned. Find out why by examining the errors:
+>> prd = Product.new
+=> #<Product id: nil, title: nil, description: nil, image_url: nil, created_at: nil, updated_at: nil, price: #<BigDecimal:246aa1c,'0.0',4(8)>>
+>> prd.save
+=> false
+>> prd.errors.full_messages
+=> ["Image url must be a URL for a GIF, JPG, or PNG image",
+      "Image url can't be blank", "Price should be at least 0.01",
+      "Title can't be blank", "Description can't be blank"]
+• Look up the authenticate_or_request_with_http_basic() method and utilize it in your :authorize callback if the request.format is not Mime[:HTML]. Test that it works by accessing an Atom feed:
+  curl --silent --user dave:secret \
+    http://localhost:3000/products/2/who_bought.atom
+• We’ve gotten our tests working by performing a login, but we haven’t yet written tests that verify that access to sensitive data requires login. Write at least one test that verifies this by calling logout() and then attempting to fetch or update some data that requires authentication.

@@ -47,3 +47,5 @@ Product.create!(title: 'Something to Read',
                 image_url: 'rails_books.jpg',
                 price: 99.99)
 #...
+
+User.create(name: 'dave', password: 'secret', password_confirmation: 'secret')
