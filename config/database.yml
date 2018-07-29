@@ -20,7 +20,7 @@ test:
   <<: *default
     database: my_database_test
 
-    production:
+production:
   <<: *default
   database: my_database_production
 
