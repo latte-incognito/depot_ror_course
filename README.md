@@ -82,3 +82,11 @@ https://github.com/rails/activemodel-serializers-xml#readme
   curl --silent --user dave:secret \
     http://localhost:3000/products/2/who_bought.atom
 • We’ve gotten our tests working by performing a login, but we haven’t yet written tests that verify that access to sensitive data requires login. Write at least one test that verifies this by calling logout() and then attempting to fetch or update some data that requires authentication.
+
+* TODO Chapter 16 playtime
+
+
+Here’s some stuff to try on your own:
+* Add a locale column to the products database, and adjust the index view to select only the products that match the locale. Adjust the products view so that you can view, enter, and alter this new column. Enter a few products in each locale, and test the resulting application.
+* Determine the current exchange rate between U.S. dollars and euros, and localize the currency display to display euros when ES_es is selected.
+* Translate the Order::PAYMENT_TYPES shown in the drop-down. You’ll need to keep the option value (which is sent to the server) the same. Change only what’s displayed.
